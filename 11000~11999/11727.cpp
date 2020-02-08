@@ -15,4 +15,3 @@ int main() {
 	cout << a[n] % 10007 << "\n";
 	return 0;
 }
-

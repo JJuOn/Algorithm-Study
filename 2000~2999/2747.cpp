@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	int f[46], n;
+	int f[45], n;
 	cin >> n;
 	if (n == 0) {
 		cout << 0 << "\n";
@@ -22,4 +22,3 @@ int main() {
 
 	return 0;
 }
-

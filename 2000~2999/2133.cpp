@@ -10,6 +10,8 @@ int main() {
 	a[0] = 1;
 	a[1] = 0;
 	a[2] = 3;
+	a[3] = 0;
+	a[4] = 11;
 	for (int i = 3; i <= n; i++) {
 		a[i] = a[i - 2] * 3;
 		for (int j = i - 4; j >= 0; j -= 2) {
@@ -19,4 +21,3 @@ int main() {
 	cout << a[n] << "\n";
 	return 0;
 }
-

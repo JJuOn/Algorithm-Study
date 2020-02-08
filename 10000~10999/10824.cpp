@@ -10,4 +10,3 @@ int main() {
 	cout << stoll(e.c_str()) + stoll(f.c_str()) << "\n";
 	return 0;
 }
-
