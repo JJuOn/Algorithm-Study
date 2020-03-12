@@ -1,17 +1,28 @@
 #include<iostream>
+
 using namespace std;
-int gcd(int a, int b);
-int lcm(int a, int b);
+
+int gcd(int a, int b) {
+	if (b != 0) {
+		return gcd(b, a%b);
+	}
+	else {
+		return a;
+	}
+}
+int lcm(int a, int b) {
+	return a * b / gcd(a, b);
+}
 int main() {
 	int t;
 	cin >> t;
-	while (t) {
+	while (t--) {
 		int m, n, x, y, l;
 		bool found = false;
 		cin >> m >> n >> x >> y;
 		l = lcm(m, n);
 		int count = 1;
-		int i=1, j=1;
+		int i = 1, j = 1;
 		if (i == x && j == y) {
 			found = true;
 		}
@@ -20,7 +31,7 @@ int main() {
 			i = x;
 			j = x;
 			if (j > n) {
-				j = j % n;
+				j %= n;
 				if (j == 0) {
 					j = n;
 				}
@@ -46,18 +57,6 @@ int main() {
 		else {
 			cout << count << endl;
 		}
-		t--;
 	}
 	return 0;
-}
-int gcd(int a, int b) {
-	if (b != 0) {
-		gcd(b, a%b);
-	}
-	else {
-		return a;
-	}
-}
-int lcm(int a, int b) {
-	return a * b / gcd(a, b);
 }
